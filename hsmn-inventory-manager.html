@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSMN Inventory Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/57198c087b.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            background: none;
+            background-position: 0 0, 25px 25px;
+            background-size: 50px 50px;
+            background-color: #080808;
+            color: #fff;
+            margin: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #home {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;  
+        }
+        .bg-img{
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div id="home">
+        <div class="container">
+          <nav>
+            <div class="logo">
+              <a href="index.html#home"><h1>AK</h1></a>
+            </div> 
+            <ul id="sidemenu">
+              <li><a href="index.html#about">ABOUT</a></li>
+              <li><a href="index.html#projects">PROJECTS</a></li>
+              <li><a href="index.html#contact">CONTACT</a></li>
+              <li><a href="https://drive.google.com/file/d/1XBMw8J_uF7QMPnE4zTi0Gz3wABCXVVHb/view?usp=sharing" target="_blank">RESUME</a></li>
+              <i class="fa-solid fa-xmark" style="color: #ffffff;" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" style="color: #ffffff;" onclick="openmenu()"></i>
+          </nav>
+
+          <div id="background">
+            <div class="container">
+                <img class="bg-img" src="Media/hsmn inventory manager media/hsmn inventory manager.png"></img>
+            </div>
+          </div>
+
+          <div class="details-section">
+            <h2>HSMN Inventory Manager</h2>
+            <div class="line"></div>
+        
+            <div class="sub-section">
+                <h3>Role</h3>
+                <p>Lead designer</p>
+            </div>
+        
+            <div class="sub-section">
+                <h3>Timeline</h3>
+                <p>January 2024 - present </p>
+            </div>
+        
+            <div class="sub-section">
+                <h3>Skills</h3>
+                <p>--</p>
+            </div>
+        
+            <div class="sub-section">
+                <h3>Tools</h3>
+                <p>Python, Square API, Google Sheets API</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div id="project-overview">
+        <div class="container">
+          <div class="project-overview-text">
+            <p>
+              { project overview } <br><br>
+              The <a href="https://www.hindutemplemn.org" target="_blank">Hindu society of minnesota (HSMN)</a> is a non-profit based in maple grove, minnesota dedicated to providing religious, spiritual, educational, social, and cultural activities for all generations of the Hindu community. <br> <br>
+              As their information technology support services intern and the lead designer from start to finish, I was able to develop a comprehensive food inventory management system in an effort to streamline and enhance the operational efficiency of nonprofit's food serving division. I worked closely with the non-profit's food committee to evaluate the core needs of their organization and propose a feasible technical solution to be built out in less than 4 months. <br><br>
+              I designed the system from zero to one, along with a full-scale design system and design documentation to help ensure that the product can be sustained by the non-profit long term.
+            </p>
+          </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

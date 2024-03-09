@@ -1,0 +1,509 @@
+@font-face {
+  font-family: 'Mistrully';
+  src: url(Fonts/Mistrully.ttf);
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(Fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'PoppinsSemiBold';
+  src: url(Fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: PoppinsMedium;
+  src: url(Fonts/Poppins-Medium.ttf);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes lineAppear {
+  from{
+    width: 0;
+  }
+  to{
+    width: 50%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle, #333 1px, transparent 1px), 
+              radial-gradient(circle, #333 1px, transparent 1px);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+  background-color: #080808;
+  color: #fff;
+  margin: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+.container {
+  padding: 10px 10%;
+}
+
+/* loading screen */
+
+#loading-screen{
+  background: #111111 url(Media/loader.gif) no-repeat center;
+  background-size: 20%;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+}
+
+/* Gradient Background */
+.background--custom {
+  background-color: #080808;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+canvas#canvas {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(0deg) scale(3) translateY(0%);
+  --gradient-color-1: #732D5A;
+  --gradient-color-2: #481D73;
+  --gradient-color-3: #080808;
+  --gradient-color-4: #080808;
+  --gradient-speed: 0.000006;
+  filter: blur(20px);
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 10px 15%;
+  z-index: 2;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 10px 15%;
+  margin: 10px 20px;
+}
+.logo a h1{
+  font-family: "Mistrully", sans-serif;
+  text-decoration: none;
+  color: #fff;
+}
+.logo a h1:hover {
+  opacity: 0.5;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 2.5px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Home Section */
+#home {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.home-text {
+  margin-top: 20%;
+  font-size: 30px;
+  padding-right: 25%;
+  align-items: center;
+}
+.home-text h1 {
+  font-size: 50px;
+  margin-top: 20px;
+  font-family: 'Mistrully', sans-serif;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+}
+.home-text p {
+  font-size: 25px;
+  margin-top: 30px;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  word-spacing: 5px;
+  color: hsl(0, 0%, 100%, 0.7)
+}
+.home-text h2 {
+  font-size: 25px;
+  margin-top: 30px;
+  font-family: "Mistrully", sans-serif;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+}
+.home-text p1 {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  word-spacing: 5px;
+  color: hsl(0, 0%, 100%, 0.7)
+}
+
+/* About Section */
+
+#about {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.about-text p{
+  font-size: 20px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 17%;
+  margin-left: 10%;
+  padding-right: 20%;
+  position: absolute;
+  text-transform: lowercase;
+}
+
+/* Projects Section */
+
+#projects {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  transform: translateY(3%);
+}
+
+.glass-card {
+  width: 1020px;
+  height: 540px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.glass-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  z-index: -1;
+}
+.glass-card h2{
+  font-family: "PoppinsMedium", sans-serif;
+  margin-top: 20px;
+  text-align: left;
+  align-items: left;
+  justify-content: left;
+  text-transform: lowercase;
+}
+.glass-card p {
+  font-family: "Poppins", sans-serif;
+  margin-top: 5px;
+  text-transform: lowercase;
+}
+.glass-card p2 {
+  font-family: "Poppins", sans-serif;
+  opacity: 0.7;
+  margin-top: 4px;
+  text-transform: lowercase;
+}
+.more-projects-text{
+  margin-top: 3%;
+}
+.more-projects-text p3{
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  text-transform: lowercase;
+}
+.more-projects-text p3 a{
+  color: inherit;
+}
+
+/* Contact Section */
+
+#contact {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-text {
+  margin-top: 20%;
+  font-size: 30px;
+}
+
+.contact-text h1 {
+  display: flex;
+  font-size: 20px;
+  margin-top: 25%;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  text-align: left;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0.3;
+  text-transform: lowercase;
+}
+.contact-icons {
+  font-size: 100px;
+  margin-left: 10%;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+.contact-icons i {
+  margin-right: 100px;
+}
+.contact-icons a {
+  text-decoration: none;
+  color: inherit;
+}
+.contact-icons a :hover{
+  opacity: 0.5;
+}
+
+/* Footer Section */
+
+.footer-wrapper {
+  position: relative;
+  margin-top: 100vh;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+.footer p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+}
+.footer p1{
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+}
+
+nav .fa-solid {
+  display: none;
+}
+
+/* WORK */
+.details-section {
+  padding: 20px;
+  text-align: center;
+  margin-top: 40%;
+}
+
+.details-section h2 {
+  font-size: 24px;
+  font-family: "Mistrully", sans-serif;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 25%;
+  animation: fadeIn 3s forwards;
+}
+
+.details-section .line {
+  height: 2px;
+  background-color: #fff;
+  margin: 10px auto;
+  animation: lineAppear 3s forwards;
+}
+
+.sub-section {
+  display: inline-block;
+  margin: 0 20px;
+  text-transform: lowercase;
+}
+
+.details-section h3 {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 15px;
+  text-align: left;
+  animation: fadeIn 3s forwards;
+}
+
+.details-section p {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: hsl(0 0% 100% / 0.5);
+  margin-bottom: 15px;
+  text-align: left;
+  animation: fadeIn 3s forwards;
+}
+#project-overview {
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(circle, #333 1px, transparent 1px),
+              radial-gradient(circle, #333 1px, transparent 1px); 
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+  background-color: #080808;
+}
+.project-overview-text p{
+  font-size: 20px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 15%;
+  margin-left: 10%;
+  padding-right: 20%;
+  position: absolute;
+  text-transform: lowercase;
+  animation: fadeIn 3s forwards;
+}
+.project-overview-text p a{
+  color: inherit;
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .home-text h1 {
+    font-size: 35px;
+    margin-top: 20px;
+  }
+  .home-text p {
+    font-size: 25px;
+    margin-top: 5px;
+  }  
+  nav .fa-solid {
+    display: block;
+    font-size: 25px;
+  }
+  nav .fa-solid {
+    transform: translateX(-60%) translateY(50%);
+  }
+  nav ul {
+    background: #080808;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+  }
+  nav ul li {
+    display: block;
+    margin: 30px;
+  }
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .home-text {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width:1024px) {
+  .glass-card {
+    width: 680px;
+    height: 360px;
+  }
+}
+@media screen and (max-width:768px) {
+  .glass-card {
+    width: 510px;
+    height: 270px;
+  }
+}
+@media screen and (max-width:480px){
+  .about-text p{
+    font-size: 15px;
+  }
+  
+  .contact-icons {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-icons i{
+    margin-right: 0;
+    margin-bottom: 75px;
+  }
+  .glass-card {
+    width: 340px;
+    height: 180px;
+  }
+}

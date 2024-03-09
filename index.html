@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhi Karnati - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/57198c087b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div id="loading-screen">
+
+  </div>
+  
+  <!-- -----------home----------- -->
+
+  <div id="home">
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <a href="#home"><h1>AK</h1></a>
+        </div> 
+        <ul id="sidemenu">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="https://drive.google.com/file/d/1XBMw8J_uF7QMPnE4zTi0Gz3wABCXVVHb/view?usp=sharing" target="_blank">RESUME</a></li>
+          <i class="fa-solid fa-xmark" style="color: #ffffff;" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" style="color: #ffffff;" onclick="openmenu()"></i>
+      </nav>
+      <div class="home-text">
+        <h1>Abhi Karnati</h1>
+        <p>is a full stack programmer and designer with a passion for crafting seamless and visually appealing digital experiences.</p>
+        <h2>Currently</h2>
+        <p1>an information technology intern @ wayzata public schools and hindu society of minnesota.</p1>
+      </div>
+    </div>
+  </div>
+
+  <!-- -----------about----------- -->
+
+  <div id="about">
+    <div class="container">
+      <div class="about-text">
+        <p>
+          { about me } <br><br>
+          Hi, I am Abhi Karnati. I'm a spirited individual on a journey through the ever-evolving landscape of technology, finding my home at the intersection of programming and design. Infused with a genuine passion for transforming ideas into digital marvels, I revel in the joy of bringing functionality and beauty together. Beyond the screen, you'll find me fueled by curiosity, embracing the art of learning, and savoring life's eclectic moments – whether it's exploring new trails, diving into an interesting show, or simply sharing laughter with loved ones. Join me as I navigate this digital adventure, where every line of code tells a story, and every design choice is a brushstroke in the canvas of creativity.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- -----------projects----------- -->
+  
+  <div id="projects">
+    <div class="box-container">
+      <div class="glass-card">
+        <a href="hotel-web-scraper.html"><img src="Media/web scrapper media/web scraper .png" alt=""></a>
+        <h2>Hotel Web Scraper</h2>
+        <p>system to extract and organize hotel data, including prices, amenities, and reviews, remotely</p>
+        <p2>Web Scraper // Personal Project</p2>
+      </div>
+      <div class="glass-card">
+        <a href="hsmn-inventory-manager.html"><img src="Media/hsmn inventory manager media/hsmn inventory manager.png" alt=""></a>
+        <h2>HSMN Inventory Manager</h2>
+        <p>System that connects Square and Google Sheets to manage inventory remotely.</p>
+        <p2>Inventory System // Lead Designer</p2>
+      </div>
+      <div class="glass-card">
+        <a href="indian-food-tracker.html"><img src="Media/Indian food tracker media/indianfoodtracker.png""></a>
+        <h2>Indian Food Tracker</h2>
+        <p>App to monitor daily caloric intake and discover nutritional insights specifically for Indian cuisine.</p>
+        <p2>Diet Tracker // Personal Project</p2>
+      </div>
+      <div class="glass-card">
+        <a href="a-year-of-foxy.html"><img src="Media/A year of foxy media/shot_1.jpeg" alt=""></a>
+        <h2>A Year of Foxy</h2>
+        <p>A 2D platform game where a fox explores a vibrant world while overcoming various obstacles to find food.</p>
+        <p2>Video Game // Personal Project</p2>
+      </div>
+      <div class="glass-card">
+        <a href="financial-yearly-reports-sender.html"><img src="Media/FYRS Media/FYRS .png" alt=""></a>
+        <h2>Financial Yearly Reports</h2>
+        <p>A 501(c)(3) non-profit's system to mass distribute personalized donation statements to its contributors.</p>
+        <p2>Financial System // Backend collaborator</p2>
+        <div class="more-projects-text">
+          <p3>More projects on <a href="https://github.com/abhikarnati333" target="_blank">github</a></p3>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- -----------contact----------- -->
+
+  <div id="contact">
+    <div class="container">
+      <div class="contact-text">
+        <h1>
+           
+        </h1>
+      <div class="contact-icons">
+        <a href="https://github.com/abhikarnati333" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+        <a href="https://www.linkedin.com/in/abhikarnati/" target="_blank"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
+        <a href="mailto:abhikarnati33@gmail.com" target="_blank"><i class="fa-solid fa-envelope" style="color: #ffffff;"></i></a> 
+        <a href="https://drive.google.com/file/d/1XBMw8J_uF7QMPnE4zTi0Gz3wABCXVVHb/view?usp=sharing" target="_blank"><i class="fa-solid fa-file" style="color: #ffffff;"></i></a>     
+      </div>
+    </div>
+    <div class="footer-wrapper">
+      <div class="footer">
+        <p>made with love and lots of chai by abhi karnati</p>
+        <p1>version 1.0.2. last updated 03/07/24</p1>
+      </div>
+    </div>
+  </div>
+
+  <!-- -----------gradientBG----------- -->
+
+  <div class="background--custom">
+    <canvas id="canvas" />
+  </div>
+
+  <!-- -----------scripts----------- -->
+
+  <script src="https://cdn.jsdelivr.net/gh/greentfrapp/pocoloco@minigl/minigl.js"></script>
+  <script type="text/javascript" src="vanilla-tilt.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

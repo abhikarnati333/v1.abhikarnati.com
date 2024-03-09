@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Web Scraper</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/57198c087b.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            background: none;
+            background-position: 0 0, 25px 25px;
+            background-size: 50px 50px;
+            background-color: #080808;
+            color: #fff;
+            margin: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #home {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;  
+        }
+        .web-scraper-video{
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div id="home">
+        <div class="container">
+          <nav>
+            <div class="logo">
+              <a href="index.html#home"><h1>AK</h1></a>
+            </div> 
+            <ul id="sidemenu">
+              <li><a href="index.html#about">ABOUT</a></li>
+              <li><a href="index.html#projects">PROJECTS</a></li>
+              <li><a href="index.html#contact">CONTACT</a></li>
+              <li><a href="https://drive.google.com/file/d/1XBMw8J_uF7QMPnE4zTi0Gz3wABCXVVHb/view?usp=sharing" target="_blank">RESUME</a></li>
+              <i class="fa-solid fa-xmark" style="color: #ffffff;" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" style="color: #ffffff;" onclick="openmenu()"></i>
+          </nav>
+
+          <div id="video">
+            <div class="container">
+                <video autoplay loop plays-inline muted class="web-scraper-video" src="Media/web scrapper media/web scraper video.mp4" type="video/mp4"></video>
+            </div>
+          </div>
+
+          <div class="details-section">
+            <h2>Hotel Web Scraper</h2>
+            <div class="line"></div>
+        
+            <div class="sub-section">
+                <h3>Role</h3>
+                <p>Lead designer</p>
+            </div>
+        
+            <div class="sub-section">
+                <h3>Timeline</h3>
+                <p>January 2024 - February 2024</p>
+            </div>
+        
+            <div class="sub-section">
+                <h3>Skills</h3>
+                <p>Programming, web scraping, databases, UI/Ux Design, APIs</p>
+            </div>
+        
+            <div class="sub-section">
+                <h3>Tools</h3>
+                <p>Python, Pandas, Playwright, Tkinter</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div id="project-overview">
+        <div class="container">
+          <div class="project-overview-text">
+            <p>
+              { project overview } <br><br>
+              finding the perfect hotel that combines affordability and excellent reviews can be a daunting task. The Hotel Web Scraper project aims to simplify this process for travelers, providing them with a tool to discover hotels with the best prices and reviews. This web scraper is designed to gather real-time data from <a href="https://www.booking.com" target="_blank">Booking.com</a>, enabling users to make informed decisions and enhance their overall travel experience. <br><br>
+              Individuals can save time by accessing a centralized platform that consolidates information from largest hotel booking site, eliminating the need to visit various websites individually. futhermore, By providing comprehensive data on prices and reviews, the web scraper empowers individuals to make informed and stress-free decisions, enhancing the overall quality of travel experience. <br><br>
+            </p>
+          </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
